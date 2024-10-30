@@ -1,0 +1,17 @@
+.new-arrivals-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* swipper */
+
+.arrival-slider-con .swiper {
+  width: 90%;
+  margin-left: 10%;
+}
+
+.arrival-slider-con .swiper-slide {
+  width: fit-content;
+}
+

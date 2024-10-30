@@ -1,0 +1,74 @@
+
+
+/* header content */
+
+.header-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-size: 4.6vw;
+  line-height: 78px;
+  font-weight: 400;
+  width: 42%;
+}
+
+.header-body {
+  font-size: 18px;
+  line-height: 30px;
+  max-width: 416px;
+}
+
+/* end mobile navbar */
+
+@media screen and (max-width: 1024px) {
+  .burger {
+    display: block;
+  }
+  .tab-buttons,
+  .profile-links-con {
+    display: none;
+  }
+
+  .header-title {
+    font-size: 4.6vw;
+    line-height: 78px;
+    font-weight: 400;
+    width: 100%;
+  }
+
+  .header-body {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .descount-rebon-msg {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  .logo-con img {
+    height: 20px;
+  }
+  .header-title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.4000000059604645px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .header-body {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+  }
+}

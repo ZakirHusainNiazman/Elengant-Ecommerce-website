@@ -1,0 +1,54 @@
+/* swipper */
+.hero-slider{
+  margin-bottom: 30px;
+}
+
+.hero-slider .swiper {
+  width: auto;
+  height: 100%;
+}
+.hero-slider .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-slider .swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.7;
+}
+.hero-slider .swiper-pagination-bullet-active {
+  width: 30px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.hero-slider .swiper-button-next,
+.hero-slider .swiper-rtl .swiper-button-prev {
+  content: none;
+}
+
+.hero-slider .swiper-button-prev,
+.hero-slider .swiper-button-next {
+  padding: 5px 15px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.hero-slider .swiper-button-next:after,
+.hero-slider .swiper-rtl .swiper-button-prev:after {
+  content: url(../../../../../../public/images/arrow-right.svg);
+  opacity: 1;
+}
+
+.hero-slider .swiper-button-prev,
+.hero-slider .swiper-rtl .swiper-button-next {
+  content: url(../public/images/arrow-left.svg);
+  opacity: 1;
+}
+
+@media screen and (max-width:800px) {
+  .swiper-button-next,.swiper-button-prev{
+    display: none;
+  }
+}

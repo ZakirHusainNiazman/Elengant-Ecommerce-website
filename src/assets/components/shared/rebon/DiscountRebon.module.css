@@ -1,0 +1,30 @@
+.descount-rebon {
+  height: 40px;
+  background-color: #f3f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+
+.descount-rebon-content {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+.descount-rebon-msg {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  border: none;
+}

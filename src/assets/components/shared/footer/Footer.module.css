@@ -1,0 +1,244 @@
+/* footer */
+
+.footer-header-con {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f5f7;
+  position: relative;
+  background-image: url(../public/./images/footer-bg-image.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer-header{
+  width: 500px;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-bottom: 20px;
+}
+
+.footer-sub-title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+.input-container {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.emial-input {
+  border: none;
+  outline: none;
+  background-color: unset;
+  padding: 5px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer-signup-btn:hover {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+.footer-content {
+  background-color: black;
+  padding: 80px 160px 30px;
+  color: white;
+}
+.footer-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.footer-navigation a {
+  text-decoration: none;
+}
+.footer-navigation {
+  height: 30px;
+}
+.tab-buttons {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+.tab-buttons a {
+  color: #fefefe;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.tab-buttons a:hover {
+  color: black;
+  background-color: white;
+}
+.navigation-logo-con {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+.deco-store-link {
+  border-left: 1px solid gray;
+  padding-left: 50px;
+  color: gray;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+.copyright-msg {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: gray;
+}
+
+.policys-links-con {
+  display: flex;
+  gap: 30px;
+}
+
+.policys-links-con a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: left;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-header-con {
+    height: 301px;
+  }
+  .footer-header{
+    width: 450px;
+  }
+  .footer-content {
+    background-color: black;
+    padding: 80px 80px 30px;
+    color: white;
+  }
+
+  .deco-store-link {
+    padding-left: 15px;
+  }
+  .navigation-logo-con {
+    width: 300px;
+  }
+
+  .tab-buttons {
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+   .footer-header-con {
+    background-image: none;
+  }
+  .tab-buttons,
+  .policys-links-con {
+    justify-content: space-between;
+  }
+  .tab-buttons a {
+    color: #fefefe;
+    padding: 5px 30px;
+    border-radius: 5px;
+  }
+
+  .footer-navigation {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-socials {
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .footer-header {
+    width: 350px;
+  }
+  .footer-title {
+font-size: 28px;
+line-height: 34px;
+font-weight: 500;
+letter-spacing: -0.6000000238418579px;
+  margin-bottom: 10px;
+}
+
+  .footer-navigation {
+    height: fit-content;
+    margin-bottom: 20px;
+  }
+  .navigation-logo-con img {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .footer-navigation a {
+    border: none;
+    padding: 0;
+  }
+  .tab-buttons {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .tab-buttons a {
+    color: #fefefe;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+  .navigation-logo-con {
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-bottom{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+     .policys-links-con{
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .copyright-msg{
+      text-align: center  ;
+    }
+    .policys-links-con a{
+        width: 50%;
+        text-align: center;
+    }
+}

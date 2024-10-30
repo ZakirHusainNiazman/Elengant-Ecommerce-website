@@ -1,0 +1,30 @@
+.arrow-btn,
+.btn-black {
+  height: 20px;
+  display: flex;
+  color: #377dff;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #377dff;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.btn-black {
+  border-color: black;
+  color: black;
+}
+
+@media screen and (max-width: 630px) {
+  .arrow-btn {
+    display: none;
+  }
+  .arrow-btn,
+  .btn-black {
+    font-size: 14px;
+  }
+  .descount-rebon-content img {
+    height: 16px;
+  }
+  
+}
