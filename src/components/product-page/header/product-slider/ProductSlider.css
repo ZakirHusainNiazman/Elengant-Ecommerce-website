@@ -1,0 +1,27 @@
+.product-page-slider{
+  width: 100%; 
+  max-width: 728px;
+  box-sizing: border-box; 
+}
+
+.swiper-slide img{
+  height: 100%;
+  width: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 5px 15px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+
+.swiper-button-next{
+  content: url(../../../../../../public/images/arrow-right.svg);
+  opacity: 1;
+}
+
+.swiper-button-prev {
+  content: url(../public/images/arrow-left.svg);
+  opacity: 1;
+}

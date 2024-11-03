@@ -1,6 +1,6 @@
 import './App.css'
 
-import ProductPage from './assets/components/product-page/ProductPage';
+import ProductPage from './pages/ProductPage.jsx'
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <ProductPage />
+     <ProductPage />
     </>
   );
 }
