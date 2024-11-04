@@ -28,7 +28,6 @@ function ProductPage() {
         <MostAskedQuestion />
         <AdditionalInfo />
       </section>
-      <Footer />
     </>
   );
 }

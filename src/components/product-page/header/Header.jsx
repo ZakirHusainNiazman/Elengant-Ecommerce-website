@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-import DiscountRebon from "../../shared/rebon/DiscountRebon.jsx";
-import Navbar from "../../shared/nabar/Navbar.jsx";
-
 import cssClasses from "../ProductPage.module.css";
 import ProductSlider from "./product-slider/ProductSlider.jsx";
 
@@ -26,9 +23,7 @@ function Header() {
     setShowColors((oldState) => !oldState);
   }
   return (
-    <header className={`${cssClasses["product-page-header"]}}`}>
-      <DiscountRebon />
-      <Navbar />
+    <div className={`${cssClasses["product-page-header"]}}`}>
       <ul
         className={`${cssClasses["page-path-con"]} ${cssClasses["container"]} `}
       >
@@ -162,7 +157,7 @@ function Header() {
           </p>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 

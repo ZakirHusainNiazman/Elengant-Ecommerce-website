@@ -12,6 +12,7 @@ import profileIcon from "../../../../public/Images/profile-icon.svg";
 import BurgerIcon from "../../../ui/burger-icon/BurgerIcon.jsx";
 
 import cssClasses from "./Navbar.module.css";
+import { NavLink } from 'react-router-dom';
 function Navbar() {
   const [resNavIsOpen, setResNavIsOpen] = useState(false);
 
@@ -49,16 +50,16 @@ function Navbar() {
               </form>
             </li>
           <li>
-            <a href="">Home</a>
+            <NavLink className={({isActive})=>isActive ? cssClasses['active'] : undefined } to="/">Home</NavLink>
           </li>
           <li>
-            <a href="">Shop</a>
+            <NavLink className={({isActive})=>isActive ? cssClasses['active'] : undefined } to="/shop">Shop</NavLink>
           </li>
           <li>
-            <a href="">Product</a>
+            <NavLink className={({isActive})=>isActive ? cssClasses['active'] : undefined } to="/product">Product</NavLink>
           </li>
           <li>
-            <a href="">Contact Us</a>
+            <NavLink className={({isActive})=>isActive ? cssClasses['active'] : undefined } to="/contact">Contact Us</NavLink>
           </li>
         </ul>
         <ul className={cssClasses["navigation-links"]}>

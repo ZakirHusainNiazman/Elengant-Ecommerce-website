@@ -27,8 +27,13 @@
 .tab-buttons a {
   text-decoration: none;
   padding: 10px;
-  border-radius: 10px;
+  font-weight: 500;
+  color: #6C7275;
+;
+}
+.tab-buttons a:hover,.tab-buttons a.active {
   color: black;
+  border-bottom: 2px solid black;
 }
 .cart-items-no {
   background-color: black;

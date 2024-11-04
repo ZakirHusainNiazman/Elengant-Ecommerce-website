@@ -1,0 +1,82 @@
+
+/* styel for error page */
+.error-page-con{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error-logo{
+    width: 40%;
+    margin-top: -80px;
+    margin-bottom: 30px;
+}
+
+.error-page-content{
+max-width: 520px;
+}
+
+.error-page-title{
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.error-page-body{
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #353A3E;
+    margin-bottom: 30px;
+}
+
+.error-page-content a{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+ padding:10px 20px;
+ border-radius: 5px;
+}
+
+.error-page-content a:hover{
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(103, 101, 101);
+ padding:10px 20px;
+ border-radius: 5px;
+}
+
+@media screen and (max-width:1024px) {
+    .error-logo{
+    width: 50%;
+}
+.error-page-content{
+    width: 400px;
+}
+.error-page-title{
+    font-size: 40px;
+    line-height: 46px;
+}
+.error-page-body{
+    font-size: 16px;
+    line-height: 24px;
+}
+}
+@media screen and (max-width:630px) {
+    .error-logo{
+    width: 55%;
+    margin-top: 0px;
+}
+.error-page-content{
+    width: 300px;
+}
+.error-page-title{
+    font-size: 36px;
+    line-height: 40px;
+}
+}
+/* end error page */
