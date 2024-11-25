@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 
 import Dropdown from "../../../ui/dropdown/Dropdown.jsx";
 
-import starIcon from "../../../../public/images/product-page-images/empty-star-icon.svg";
-import profileImage1 from "../../../../public/images/product-page-images/profile-image1.svg";
-import rightArrow from "../../../../public/images/product-page-images/right-arrow-white.svg";
+import starIcon from "../../../assets/product-images/empty-star-icon.svg";
+
+import rightArrow from "../../../assets/product-images/right-arrow-white.svg";
 
 import cssClasses from "../../../components/product-page/ProductPage.module.css";
 
-function CustumerReviews() {
+import ReviewStars from '../../../ui/stars/ReviewStars.jsx'
+
+function CustumerReviews({reviews}) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -19,7 +21,6 @@ function CustumerReviews() {
     });
     return () => {};
   }, []);
-
   return (
     <>
       <div className={cssClasses["custumer-reviews-con"]}>
@@ -49,174 +50,27 @@ function CustumerReviews() {
         <Dropdown options={["Newest", "Most Rated", "Oldest"]} />
       </div>
       <div className={cssClasses["custumer-reviews-con"]}>
-        <div className={cssClasses["custumer-review-card"]}>
-          <div className={cssClasses["custumer-review-header"]}>
-            <img src={profileImage1} alt="" />
-            <div className={cssClasses["review-content"]}>
-              <h5 className={cssClasses["review-title"]}>Nicolas Jensen</h5>
-              <p className={cssClasses["review-stars"]}>
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-              </p>
+        {reviews.map((review) => (
+          <div className={cssClasses["custumer-review-card"]} key={review.id}>
+            <div className={cssClasses["custumer-review-header"]}>
+              <img src={review.image} alt="" />
+              <div className={cssClasses["review-content"]}>
+                <h5 className={cssClasses["review-title"]}>
+                  {review.custumerName}
+                </h5>
+                <ReviewStars starsNo={review.stars} />
+              </div>
+            </div>
+            <div className={cssClasses["review-body"]}>
+              <p className={cssClasses["review-body"]}>{review.body}</p>
+              <div className={cssClasses["review-reactions"]}>
+                <a href="">Like</a>
+                <a href="">Reply</a>
+              </div>
             </div>
           </div>
-          <div className={cssClasses["review-body"]}>
-            <p className={cssClasses["review-body"]}>
-              I bought it 3 weeks ago and now come back just to say “Awesome
-              Product”. I really enjoy it. At vero eos et accusamus et iusto
-              odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupt et quas molestias excepturi sint non
-              provident.
-            </p>
-            <div className={cssClasses["review-reactions"]}>
-              <a href="">Like</a>
-              <a href="">Reply</a>
-            </div>
-          </div>
-        </div>{" "}
-        <div className={cssClasses["custumer-review-card"]}>
-          <div className={cssClasses["custumer-review-header"]}>
-            <img src={profileImage1} alt="" />
-            <div className={cssClasses["review-content"]}>
-              <h5 className={cssClasses["review-title"]}>Nicolas Jensen</h5>
-              <p className={cssClasses["review-stars"]}>
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-              </p>
-            </div>
-          </div>
-          <div className={cssClasses["review-body"]}>
-            <p className={cssClasses["review-body"]}>
-              I bought it 3 weeks ago and now come back just to say “Awesome
-              Product”. I really enjoy it. At vero eos et accusamus et iusto
-              odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupt et quas molestias excepturi sint non
-              provident.
-            </p>
-            <div className={cssClasses["review-reactions"]}>
-              <a href="">Like</a>
-              <a href="">Reply</a>
-            </div>
-          </div>
-        </div>{" "}
-        <div className={cssClasses["custumer-review-card"]}>
-          <div className={cssClasses["custumer-review-header"]}>
-            <img src={profileImage1} alt="" />
-            <div className={cssClasses["review-content"]}>
-              <h5 className={cssClasses["review-title"]}>Nicolas Jensen</h5>
-              <p className={cssClasses["review-stars"]}>
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-              </p>
-            </div>
-          </div>
-          <div className={cssClasses["review-body"]}>
-            <p className={cssClasses["review-body"]}>
-              I bought it 3 weeks ago and now come back just to say “Awesome
-              Product”. I really enjoy it. At vero eos et accusamus et iusto
-              odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupt et quas molestias excepturi sint non
-              provident.
-            </p>
-            <div className={cssClasses["review-reactions"]}>
-              <a href="">Like</a>
-              <a href="">Reply</a>
-            </div>
-          </div>
-        </div>{" "}
-        <div className={cssClasses["custumer-review-card"]}>
-          <div className={cssClasses["custumer-review-header"]}>
-            <img src={profileImage1} alt="" />
-            <div className={cssClasses["review-content"]}>
-              <h5 className={cssClasses["review-title"]}>Nicolas Jensen</h5>
-              <p className={cssClasses["review-stars"]}>
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-              </p>
-            </div>
-          </div>
-          <div className={cssClasses["review-body"]}>
-            <p className={cssClasses["review-body"]}>
-              I bought it 3 weeks ago and now come back just to say “Awesome
-              Product”. I really enjoy it. At vero eos et accusamus et iusto
-              odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupt et quas molestias excepturi sint non
-              provident.
-            </p>
-            <div className={cssClasses["review-reactions"]}>
-              <a href="">Like</a>
-              <a href="">Reply</a>
-            </div>
-          </div>
-        </div>{" "}
-        <div className={cssClasses["custumer-review-card"]}>
-          <div className={cssClasses["custumer-review-header"]}>
-            <img src={profileImage1} alt="" />
-            <div className={cssClasses["review-content"]}>
-              <h5 className={cssClasses["review-title"]}>Nicolas Jensen</h5>
-              <p className={cssClasses["review-stars"]}>
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-              </p>
-            </div>
-          </div>
-          <div className={cssClasses["review-body"]}>
-            <p className={cssClasses["review-body"]}>
-              I bought it 3 weeks ago and now come back just to say “Awesome
-              Product”. I really enjoy it. At vero eos et accusamus et iusto
-              odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupt et quas molestias excepturi sint non
-              provident.
-            </p>
-            <div className={cssClasses["review-reactions"]}>
-              <a href="">Like</a>
-              <a href="">Reply</a>
-            </div>
-          </div>
-        </div>{" "}
-        <div className={cssClasses["custumer-review-card"]}>
-          <div className={cssClasses["custumer-review-header"]}>
-            <img src={profileImage1} alt="" />
-            <div className={cssClasses["review-content"]}>
-              <h5 className={cssClasses["review-title"]}>Nicolas Jensen</h5>
-              <p className={cssClasses["review-stars"]}>
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-                <img src={starIcon} alt="" />
-              </p>
-            </div>
-          </div>
-          <div className={cssClasses["review-body"]}>
-            <p className={cssClasses["review-body"]}>
-              I bought it 3 weeks ago and now come back just to say “Awesome
-              Product”. I really enjoy it. At vero eos et accusamus et iusto
-              odio dignissimos ducimus qui blanditiis praesentium voluptatum
-              deleniti atque corrupt et quas molestias excepturi sint non
-              provident.
-            </p>
-            <div className={cssClasses["review-reactions"]}>
-              <a href="">Like</a>
-              <a href="">Reply</a>
-            </div>
-          </div>
-        </div>
+        ))}
+
         <a href="" className={cssClasses["load-more-btn"]}>
           Load More
         </a>

@@ -2,8 +2,8 @@ import { useState } from "react";
 
 
 import RightArrowBtn from "../../../ui/right-arrow-btn/RightArrowBtn";
-import descoutImage from "../../../../public/images/Discount-logo.svg";
-import closeSign from "../../../../public/images/close.svg";
+import descoutImage from "../../../assets/home-images/Discount-logo.svg";
+import closeSign from "../../../assets/home-images/close.svg";
 
 import cssClasses from "./DiscountRebon.module.css";
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import errorImage from '../../public/images/error-logo.svg';
+import errorImage from "../assets/home-images/error-logo.svg";
 
 export default function ErrorPage() {
     return (

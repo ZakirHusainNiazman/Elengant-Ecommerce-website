@@ -2,7 +2,7 @@
 
   import cssClasses from './Banner.module.css';
 
-  import bannerImage from "../../../../public/images/banner-image.svg";
+  import bannerImage from "../../../assets/home-images/banner-image.svg";
 
   function Banner() {
     return (

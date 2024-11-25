@@ -1,4 +1,4 @@
-import arrowRight from "../../../public/images/arrow-right.svg";
+import arrowRight from "../../assets/home-images/arrow-right.svg";
 import "./RightArrowBtn.css";
 
 export default function RightArrowBtn({ cssClass, label, url }) {

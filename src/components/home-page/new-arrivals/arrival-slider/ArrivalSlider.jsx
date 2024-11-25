@@ -7,10 +7,10 @@ import "swiper/css/navigation";
 
 import { FreeMode, Pagination } from "swiper/modules";
 
-import lampImage from "../../../../../public/images/lamp-image.svg";
-import ProductCard from "./ProductCard";
+import ProductCard from "../../../../ui/product-card/ProductCard";
 
 import './ArrivalSlider.css'
+import { DUMMY_PRODUCTS } from "../../../../dummy-products";
 
 function ArrivalSlider() {
   return (
@@ -21,94 +21,20 @@ function ArrivalSlider() {
         freeMode={true}
         modules={[FreeMode, Pagination]}
       >
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductCard
-            img={lampImage}
-            imgAlt="lamp Image"
-            typeLabel="New"
-            dAmount="-50%"
-            pName="Loveseat Sofa"
-            newPrice="$199.00"
-            oldPrice="$100.00"
-          />
-        </SwiperSlide>
+        {DUMMY_PRODUCTS.map((product) => (
+          <SwiperSlide key={product.id}>
+            <ProductCard
+              pid={product.id}
+              image={product.images[0]}
+              productName={product.title}
+              price={product.price}
+              status={product.status}
+              discount={product.discount}
+              isAdded={true}
+              className="slider-item-image"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

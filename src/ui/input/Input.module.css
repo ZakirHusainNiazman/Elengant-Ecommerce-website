@@ -1,0 +1,32 @@
+.input-wrapper{
+    width: 100%;
+}
+.label{
+font-size: 12px;
+font-weight: 700;
+line-height: 12px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+display: block;
+margin-bottom: 10px;
+color: #6C7275;
+box-sizing: border-box;
+text-transform: uppercase;
+}
+
+.input{
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+padding: 6px 16px;
+border-radius: 6px;
+border: 1px solid #CBCBCB;
+outline: none;
+color: #6C7275;
+width: 100%;
+box-sizing: border-box;
+}

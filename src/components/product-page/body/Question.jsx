@@ -1,6 +1,6 @@
 import cssClasses from "../ProductPage.module.css";
 
-function Question({question,answer,isActive}) {
+function Question({question,answer,isActive,openQuestion}) {
   return (
     <div
       className={`${cssClasses["question-wrapper"]} ${
@@ -9,7 +9,7 @@ function Question({question,answer,isActive}) {
     >
       <div className={cssClasses["question"]}>
         <p className={cssClasses["question-body"]}>{question}?</p>
-        <span className={cssClasses["question-detaile-icon"]}>&#9650;</span>
+        <span onClick={openQuestion} className={cssClasses["question-detaile-icon"]}>&#9650;</span>
       </div>
       <div className={cssClasses["answer"]}>
         <p className={cssClasses["answer-body"]}>{answer}</p>

@@ -1,0 +1,72 @@
+.toolbar-icons-con1{
+    display: grid;
+    grid-template-columns: repeat(3,7px);
+    grid-template-rows: repeat(3,7px);
+
+    grid-template-areas: 
+    "icon-1 icon-2 icon-3"
+    "icon-4 icon-5 icon-6"
+    "icon-7 icon-8 icon-9";
+    justify-content: center;
+    gap: 2px;
+    grid-column-gap: 2px;
+    width: 21px;
+}
+.grid{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,10px);
+    grid-template-areas: 
+    "icon-1 icon-2"
+    "icon-3 icon-4"
+}
+.verticle{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,10px);
+    grid-template-areas: 
+    "icon-1 icon-2"
+    "icon-1 icon-2"
+}
+
+.horizontle{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,10px);
+    grid-template-areas: 
+    "icon-1 icon-1"
+    "icon-2 icon-2"
+}
+.icon{
+    background-color: #6C7275;
+    border-radius: 2px;
+}
+.active .icon{
+    background-color:black;
+    border-radius: 2px;
+}
+.icon-1{
+    grid-area: icon-1;
+}
+.icon-2{
+    grid-area: icon-2;
+}
+.icon-3{
+    grid-area: icon-3;
+}
+.icon-4{
+    grid-area: icon-4;
+}
+.icon-5{
+    grid-area: icon-5;
+}
+.icon-6{
+    grid-area: icon-6;
+}
+.icon-7{
+    grid-area: icon-7;
+}
+.icon-8{
+    grid-area: icon-8;
+}
+.icon-9{
+    grid-area: icon-9;
+}
+

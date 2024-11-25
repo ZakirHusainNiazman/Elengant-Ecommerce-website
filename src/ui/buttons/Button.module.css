@@ -1,0 +1,14 @@
+.black-btn {
+  background-color: #141718;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.4000000059604645px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding: 10px 26px;
+  width: 100%;
+  border-radius: 8px;
+}

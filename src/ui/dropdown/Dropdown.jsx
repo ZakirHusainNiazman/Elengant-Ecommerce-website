@@ -3,7 +3,7 @@ import Select from './Select'
 
 import cssClasses from './Dropdown.module.css';
 
-function Dropdown({options}) {
+function Dropdown({options,label,className=''}) {
   const [menuShow, setMenuShow] = useState(false);
   const [selected, setSelected] = useState(options[0]);
 
@@ -12,13 +12,24 @@ function Dropdown({options}) {
     setMenuShow((oldState) => !oldState);
   }
 
-  const dropdownList = options.map((option, i) => (
-    <li key={i} onClick={selectOption} >{option}</li>
-  ))
+  const dropdownList = options.map((option, i) => {
+    
+    return (
+      <li
+        key={i}
+        className={option === selected ? cssClasses["selected"] :undefined}
+        onClick={selectOption}
+      >
+        {option}
+      </li>
+    );
+  }
+  )
 
   return (
     <>
-      <div className={cssClasses["dropdown"]}>
+      <div className={`${cssClasses["dropdown"]} ${className}`}>
+        {label && <h5 className={cssClasses["dropdown-label"]}>{label}</h5>}
         <Select
           menuShow={menuShow}
           setMenuShow={setMenuShow}

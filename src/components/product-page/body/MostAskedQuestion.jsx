@@ -1,7 +1,18 @@
+import { useState } from 'react';
+
+
 import cssClasses from "../ProductPage.module.css";
 import Question from "./Question";
 
-function MostAskedQuestion() {
+function MostAskedQuestion({questions}) {
+  const [openQuestionId, setOpenQuestionId] = useState('');
+
+  function handleOpenQuestion(id) {
+    if (id === openQuestionId) {
+      return setOpenQuestionId('');
+    }
+    setOpenQuestionId(id);
+  }
   return (
     <div className={cssClasses["most-asked-question-con"]}>
       <h1 className={cssClasses["questions-main-title"]}>Most Questions</h1>
@@ -12,32 +23,16 @@ function MostAskedQuestion() {
         </form>
       </div>
       <div className={cssClasses["questions-container"]}>
-        <Question
-          question="Can you this in different color"
-          answer="Yes we can But your will have to pay in advance in order to get your
-          product ready."
-          isActive={true}
-        />
-        <Question
-          question="Can you this in different color"
-          answer="Yes we can But your will have to pay in advance in order to get your
-          product ready."
-        />
-        <Question
-          question="Can you this in different color"
-          answer="Yes we can But your will have to pay in advance in order to get your
-          product ready."
-        />
-        <Question
-          question="Can you this in different color"
-          answer="Yes we can But your will have to pay in advance in order to get your
-          product ready."
-        />
-        <Question
-          question="Can you this in different color"
-          answer="Yes we can But your will have to pay in advance in order to get your
-          product ready."
-        />
+        {questions.map((question) => (
+          <Question
+            key={question.id}
+            question={question.question}
+            answer={question.answer}
+            isActive={question.id === openQuestionId}
+            openQuestion={() => handleOpenQuestion(question.id)}
+          />
+        ))
+        }
       </div>
       ;
     </div>

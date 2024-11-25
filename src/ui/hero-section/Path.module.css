@@ -1,0 +1,16 @@
+.page-path-con {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: #605f5f;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.page-path-con li:last-child span {
+  color: black;
+}

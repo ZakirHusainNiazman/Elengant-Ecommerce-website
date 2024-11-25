@@ -1,31 +1,13 @@
-import emailIcon from "../../../../public/images/email-icon.svg";
-import footerLogo from "../../../../public/Images/footer-logo.svg";
-import youtubeIcon from "../../../../public/Images/youtube-icon.svg";
-import facebookIcon from "../../../../public/Images/facebook-icon.svg";
-import instagramIcon from "../../../../public/Images/instagram-icon.svg";
+import footerLogo from "../../../assets/home-images/footer-logo.svg";
+import youtubeIcon from "../../../assets/home-images/youtube-icon.svg";
+import facebookIcon from "../../../assets/home-images/facebook-icon.svg";
+import instagramIcon from "../../../assets/home-images/instagram-icon.svg";
 
 import cssClasses from './Footer.module.css';
 
 function Footer() {
   return (
     <footer className={cssClasses['footer-section']}>
-      <div className={cssClasses['footer-header-con']}>
-        <div className={cssClasses['footer-header']}>
-          <h2 className={cssClasses['footer-title']}>Join Our Newsletter</h2>
-          <p className={cssClasses['footer-sub-title']}>
-            Sign up for deals, new products and promotions
-          </p>
-          <div className={cssClasses['input-container']}>
-            <img src={emailIcon} alt="email icon" />
-            <input
-              type="email"
-              className={cssClasses['emial-input']}
-              placeholder="Enter your email"
-            />
-            <a className={cssClasses['footer-signup-btn']}>Signup</a>
-          </div>
-        </div>
-      </div>
       <div className={cssClasses['footer-content']}>
         <div className={cssClasses['footer-navigation']}>
           <div className={cssClasses['navigation-logo-con']}>

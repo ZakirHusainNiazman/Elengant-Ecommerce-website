@@ -2,7 +2,7 @@ import FeatureCard from "./FeatureCard";
 
 import cssClasses from "./Features.module.css";
 
-import lockIcon from "../../../../public/images/lock-icon.svg";
+import lockIcon from "../../../assets/home-images/lock-icon.svg";
 
 
 function Features() {

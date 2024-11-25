@@ -1,6 +1,6 @@
-import articleImage1 from "../../../../public/images/article-image1.svg";
-import articleImage2 from "../../../../public/images/article-image2.svg";
-import articleImage3 from "../../../../public/images/article-image3.svg";
+import articleImage1 from "../../../assets/home-images/article-image1.svg";
+import articleImage2 from "../../../assets/home-images/article-image2.svg";
+import articleImage3 from "../../../assets/home-images/article-image3.svg";
 import RightArrowBtn from "../../../ui/right-arrow-btn/RightArrowBtn";
 
 import ArticleCard from "./ArticleCard";

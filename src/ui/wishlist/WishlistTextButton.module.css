@@ -1,0 +1,23 @@
+.whishlist-btn{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration: none;
+    color: #141718;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.whishlist-btn:hover{
+    background-color: #3333;
+}
+
+.whishlist-btn span {
+    display: flex;
+    align-items: center;
+}

@@ -4,7 +4,7 @@
   box-sizing: border-box; 
 }
 
-.swiper-slide img{
+.product-slider-image{
   height: 100%;
   width: 100%;
 }
@@ -17,11 +17,11 @@
 
 
 .swiper-button-next{
-  content: url(../../../../../../public/images/arrow-right.svg);
+  content: url(../../../../assets/home-images/arrow-right.svg);
   opacity: 1;
 }
 
 .swiper-button-prev {
-  content: url(../public/images/arrow-left.svg);
+  content: url(../../../../assets/home-images/arrow-left.svg);
   opacity: 1;
 }

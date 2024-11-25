@@ -1,0 +1,15 @@
+.review-stars{
+    display: flex;
+    gap: 30px;
+}
+.review-stars-con{
+    display: flex;
+    gap: 2.5px;
+}
+
+.review-text{
+font-size: 12px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+}

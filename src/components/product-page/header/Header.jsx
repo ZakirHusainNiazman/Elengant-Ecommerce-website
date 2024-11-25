@@ -3,16 +3,16 @@ import { useState } from "react";
 import cssClasses from "../ProductPage.module.css";
 import ProductSlider from "./product-slider/ProductSlider.jsx";
 
-import greaterThanIcon from "../../../../public/images/product-page-images/greater-than-icon.svg";
-import productImage1 from "../../../../public/images/product-page-images/product-image1.svg";
-import productImage2 from "../../../../public/images/product-page-images/product-image2.svg";
-import productImage3 from "../../../../public/images/product-page-images/product-image3.svg";
-import starIcon from "../../../../public/images/product-page-images/empty-star-icon.svg";
+import greaterThanIcon from "../../../assets/product-images/greater-than-icon.svg";
+import productImage1 from "../../../assets/product-images/product-image1.svg";
+import productImage2 from "../../../assets/product-images/product-image2.svg";
+import productImage3 from "../../../assets/product-images/product-image3.svg";
+import starIcon from "../../../assets/product-images/empty-star-icon.svg";
 
-import productColor1Image from "../../../../public/images/product-page-images/product-color1-image.svg";
-import productColor2Image from "../../../../public/images/product-page-images/product-color2-image.svg";
-import productColor3Image from "../../../../public/images/product-page-images/product-color3-image.svg";
-import productColor4Image from "../../../../public/images/product-page-images/product-color4-image.svg";
+import productColor1Image from "../../../assets/product-images/product-color1-image.svg";
+import productColor2Image from "../../../assets/product-images/product-color2-image.svg";
+import productColor3Image from "../../../assets/product-images/product-color3-image.svg";
+import productColor4Image from "../../../assets/product-images/product-color4-image.svg";
 
 import { CiHeart } from "react-icons/ci";
 
@@ -24,25 +24,7 @@ function Header() {
   }
   return (
     <div className={`${cssClasses["product-page-header"]}}`}>
-      <ul
-        className={`${cssClasses["page-path-con"]} ${cssClasses["container"]} `}
-      >
-        <li>
-          <span>Home </span>
-          <img src={greaterThanIcon} alt="" />
-        </li>
-        <li>
-          <span>Shop </span>
-          <img src={greaterThanIcon} alt="" />
-        </li>
-        <li>
-          <span>Contact Us </span>
-          <img src={greaterThanIcon} alt="" />
-        </li>
-        <li>
-          <span>Product </span>
-        </li>
-      </ul>
+      
       <div
         className={`${cssClasses["product-info-con"]} ${cssClasses["container"]}`}
       >

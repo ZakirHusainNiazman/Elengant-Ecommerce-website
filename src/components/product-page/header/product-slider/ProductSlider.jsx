@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import productImage1 from "../../../../../public/images/product-page-images/product-slider-image.svg";
+import productImage1 from "../../../../assets/product-images/product-slider-image.svg";
 
 // Import Swiper styles
 
@@ -24,19 +24,19 @@ function ProductSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={productImage1} alt="" />
+          <img src={productImage1} alt="" className="product-slider-image" />
         </SwiperSlide>{" "}
         <SwiperSlide>
-          <img src={productImage1} alt="" />
+          <img src={productImage1} alt="" className="product-slider-image" />
         </SwiperSlide>{" "}
         <SwiperSlide>
-          <img src={productImage1} alt="" />
+          <img src={productImage1} alt="" className="product-slider-image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={productImage1} alt="" />
+          <img src={productImage1} alt="" className="product-slider-image" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={productImage1} alt="" />
+          <img src={productImage1} alt="" className="product-slider-image" />
         </SwiperSlide>
       </Swiper>
     </div>

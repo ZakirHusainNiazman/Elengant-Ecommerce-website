@@ -3,23 +3,6 @@
   margin: auto;
 }
 
-.page-path-con {
-  display: flex;
-  gap: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
-  color: #605f5f;
-  list-style-type: none;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.page-path-con li:last-child span {
-  color: black;
-}
-
 /* product detials style */
 .product-info-con {
   display: grid;
@@ -181,7 +164,7 @@
   line-height: 20px;
   text-align: center;
 }
-/* measurements styel */
+/* meas ements styel */
 
 .product-measurements {
   margin-bottom: 30px;
@@ -325,22 +308,35 @@
   list-style-type: none;
   margin-bottom: 50px;
  border-bottom: 0.5px solid #bababa;
- padding-bottom: 5px;
 }
-.product-info-navigation a {
-  text-decoration: none;
+
+.product-info-navigation button {
   font-size: 18px;
   font-weight: 500;
   line-height: 32px;
   letter-spacing: -0.4000000059604645px;
   text-align: left;
   color: #807e7e;
-  padding:10px;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
 }
 
-.product-info-navigation a:hover{
-  border-bottom: 2px solid black;
+.product-info-navigation .active::after,.product-info-navigation button:hover:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.5px;
+  width: 0;
+  height: 2px; /* Thickness of the "outline" */
+  background-color: black; /* Color of the "outline" */
+  transition: width 0.3s; /* Smooth transition for hover effect */
+  width: 100%;
 }
+
 
 .reviews-title {
   font-size: 28px;
@@ -536,6 +532,12 @@ margin-bottom: 50px;
   border-bottom: 1px solid #bababa;
 }
 
+.question-detaile-icon{
+  transform: rotate(180deg);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 .question-body{
 font-size: 20px;
 font-weight: 600;
@@ -654,11 +656,12 @@ color: #343839;
       border: none;
     }
 
-    .product-info-navigation a {
+    .product-info-navigation button {
     border-bottom: 2px solid black;
     display: inline-block;
     width: 100%;
     box-sizing: border-box;
+    
 }
 .custumer-review-input-con{
   border-radius: 30px;

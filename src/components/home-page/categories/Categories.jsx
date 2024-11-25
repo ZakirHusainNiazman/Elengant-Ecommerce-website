@@ -1,6 +1,6 @@
-import sofaImage from "../../../../public/images/sofa-image.svg";
-import cuboardImage from "../../../../public/images/cuboard-image.svg";
-import toasterImage from "../../../../public/images/toaster-image.svg";
+import sofaImage from "../../../assets/home-images/sofa-image.svg";
+import cuboardImage from "../../../assets/home-images/cuboard-image.svg";
+import toasterImage from "../../../assets/home-images/toaster-image.svg";
 import Category from "./Category";
 
 import cssClasses from "./Categories.module.css";

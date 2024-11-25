@@ -1,0 +1,79 @@
+.cart-navigation-btn{
+    padding-bottom: 20px;
+    
+}
+.active{
+    border-bottom: 2px solid black;
+    width: 32.5%;
+}
+
+.checked{
+    border-bottom: 2px solid #45B26B;
+    width: 32.5%;
+    
+}
+.step-no{
+    padding: 10px 17px;
+    border-radius: 50%;
+    background-color: #B1B5C3;
+    color: white;
+font-size: 16px;
+font-weight: 600;
+line-height: 26px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-right: 15px;
+}
+
+.active .step-no{
+    background-color: black;
+}
+.checked .step-no{
+    background-color: #45B26B;
+    padding: 10px 12px;
+}
+
+.msg{
+font-size: 16px;
+font-weight: 600;
+line-height: 26px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color:#B1B5C3;
+}
+.active .msg{
+    color: black;
+}
+.checked .msg{
+    color: #45B26B;
+}
+
+
+@media screen and (max-width:800px) {
+.checked{
+  display: none;
+}
+.active + .cart-navigation-btn + .cart-navigation-btn{
+    display: none;
+}
+.cart-navigation-btn {
+    padding-bottom: 20px;
+    width: 40%;
+}
+}
+
+@media screen and (max-width:600px) {
+.active {
+  width: 60%;
+  max-width: 240px;
+}
+.active + .cart-navigation-btn{
+  width: 50px;
+}
+.active + .cart-navigation-btn .msg{
+  display: none;
+}
+
+}

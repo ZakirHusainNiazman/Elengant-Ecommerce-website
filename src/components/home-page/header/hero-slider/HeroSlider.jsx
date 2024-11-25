@@ -1,4 +1,4 @@
-import heroImage from "../../../../../public/images/hero-image.svg";
+import heroImage from "../../../../assets/home-images/hero-image.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles

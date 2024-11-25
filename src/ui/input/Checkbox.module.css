@@ -1,0 +1,20 @@
+.checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.checkbox input{
+    height: 24px;
+    width: 24px;
+    accent-color:#121212;
+    border-radius: 4px;
+}
+
+.checkbox label{
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}

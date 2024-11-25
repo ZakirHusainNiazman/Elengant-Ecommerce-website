@@ -37,7 +37,7 @@
 
 .hero-slider .swiper-button-next:after,
 .hero-slider .swiper-rtl .swiper-button-prev:after {
-  content: url(../../../../../../public/images/arrow-right.svg);
+  content: url(../../../../../assets/home-images/arrow-right.svg);
   opacity: 1;
 }
 

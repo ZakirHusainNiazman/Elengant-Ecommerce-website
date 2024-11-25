@@ -1,0 +1,148 @@
+.product-card{
+    width: 100%;
+    position: relative;
+}
+.product-image{
+    width: 100%;
+}
+.card-header {
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.product-prices-con {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+}
+.new_price {
+  color: black;
+  font-weight: 600;
+}
+.old_price {
+  color: gray;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.product-detail{
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #6C7275;
+margin-bottom: 5px;
+display: none;
+}
+.product-labels {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add-to-cart-btn{
+  background-color: black;
+  text-decoration: none;
+  color: white;
+font-size: 16px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: -0.4000000059604645px;
+text-align: center;
+text-decoration-skip-ink: none;
+padding: 8px 24px;
+box-sizing: border-box;
+width: 90%;
+margin: 0 5%;
+border-radius: 8px;
+position: absolute;
+bottom: 20px;
+left: 0;
+display: none;
+}
+
+.cart-actions-con{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-card:hover .add-to-cart-btn{
+  display: inline-block;
+}
+
+.product-card-expanded:hover .add-to-cart-btn{
+ display: none;
+}
+
+
+.product-card-expanded .product-detail {
+  display: inline-block;
+}
+.product-card-expanded .cart-actions-con {
+  display: flex;
+}
+
+.product-card-expanded{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card-expanded .card-body{
+  width: 100%;
+}
+.product-card-expanded .product-name {
+  margin-top: 7px;
+}
+.product-card-expanded .product-prices-con{
+margin-bottom: 7px;
+}
+
+
+.product-card-expanded .cart-actions-con .add-to-cart-btn{
+  display: inline-block;
+  width: 100%;
+  margin:0;
+  position: unset;
+}
+
+
+@media screen and (max-width:800px) {
+  .product-card-expanded{
+  gap: 0px;
+}
+.horizontle{
+  flex-direction: row;
+  gap: 30px;
+}
+.verticle{
+  flex-direction:column;
+}
+}
+
+@media screen and (max-width:560px) {
+
+.horizontle{
+  flex-direction: column;
+  gap: 0px;
+}
+
+}

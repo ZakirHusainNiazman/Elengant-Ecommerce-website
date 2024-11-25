@@ -1,0 +1,17 @@
+
+.product-type-label,
+.product-discount-label {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  background-color: white;
+  padding: 4px 14px;
+  border-radius: 5px;
+  color: black;
+  box-sizing: border-box;
+}
+.product-discount-label {
+  background-color: #38cb89;
+  color: white;
+}
+
