@@ -1,18 +1,14 @@
-import { motion ,AnimatePresence} from "framer-motion";
-
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useRef, useContext } from "react";
-import { createPortal } from "react-dom";
+
 
 import cssClasses from "./FlyoutCart.module.css";
 import CartItem from "./CartItem";
 import { CgClose } from "react-icons/cg";
-import { CartContext } from "../../store/cart-context/shopping-cart-context";
 import { formatter } from "../../dummy-products";
 
 function FlyoutCart({ toggleFlyoutCartOpen }) {
-  const dialog = useRef();
-  const { items } = useContext(CartContext);
+  const items = useSelector((state) => state.cart.items);
 
   var products = (
     <p className={cssClasses["empty-cart-msg"]}>The cart is empty!</p>
@@ -28,38 +24,22 @@ function FlyoutCart({ toggleFlyoutCartOpen }) {
     });
   }
 
-  return createPortal(
+  return (
     <>
-      <AnimatePresence>
-        <div className={cssClasses.backdrop} onClick={toggleFlyoutCartOpen} />
-      </AnimatePresence>
-      <motion.dialog
-        variants={{
-          hidden: { opacity: 0, y: 40 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        open
-        ref={dialog}
-        className={cssClasses["modal"]}
-      >
-        <div className={cssClasses["cart-header"]}>
-          <h2 className={cssClasses["cart-title"]}>Cart</h2>
-          <button
-            onClick={toggleFlyoutCartOpen}
-            className={cssClasses["close-btn"]}
-          >
-            <CgClose size={25} />
-          </button>
+      <div className={cssClasses["flyoutCart"]}>
+        <div className={cssClasses["cart-header-con"]}>
+          <div className={cssClasses["cart-header"]}>
+            <h2 className={cssClasses["cart-title"]}>Cart</h2>
+            <button
+              onClick={toggleFlyoutCartOpen}
+              className={cssClasses["close-btn"]}
+            >
+              <CgClose size={25} />
+            </button>
+          </div>
+          <ul className={cssClasses["cart-items-con"]}>{products}</ul>
         </div>
 
-        <motion.ul
-          variants={{
-            visible:{transition:{ staggerChildren:0.10 }}
-            }}
-          className={cssClasses["cart-items-con"]}>{products}</motion.ul>
         <div className={cssClasses["cart-footer"]}>
           <p className={cssClasses["cart-sub-total-con"]}>
             <span className={cssClasses["sub-total-msg"]}>Subtotal</span>
@@ -74,17 +54,24 @@ function FlyoutCart({ toggleFlyoutCartOpen }) {
             </span>
           </p>
           <p className={cssClasses["cart-actions-con"]}>
-            <Link className={cssClasses["checkout-btn"]} to="">
+            <Link
+              className={cssClasses["checkout-btn"]}
+              onClick={toggleFlyoutCartOpen}
+              to="/checkout"
+            >
               Checkout
             </Link>
-            <Link onClick={toggleFlyoutCartOpen} className={cssClasses["view-cart-btn"]} to="/cart">
+            <Link
+              onClick={toggleFlyoutCartOpen}
+              className={cssClasses["view-cart-btn"]}
+              to="/cart"
+            >
               View Cart
             </Link>
           </p>
         </div>
-      </motion.dialog>
-    </>,
-    document.getElementById("modal")
+      </div>
+    </>
   );
 }
 

@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-function ProductSlider() {
+function ProductSlider({image}) {
   return (
     <div className="product-page-slider">
       <Swiper
@@ -24,20 +24,9 @@ function ProductSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={productImage1} alt="" className="product-slider-image" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={productImage1} alt="" className="product-slider-image" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={productImage1} alt="" className="product-slider-image" />
+          <img src={image} alt="" className="product-slider-image" />
         </SwiperSlide>
-        <SwiperSlide>
-          <img src={productImage1} alt="" className="product-slider-image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={productImage1} alt="" className="product-slider-image" />
-        </SwiperSlide>
+        
       </Swiper>
     </div>
   );

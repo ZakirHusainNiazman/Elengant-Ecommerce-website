@@ -6,17 +6,30 @@ import DiscountRebon from "../shared/rebon/DiscountRebon";
 import Navbar from "../shared/nabar/Navbar";
 import Footer from "../shared/footer/Footer";
 import FlyoutCart from "../../ui/flyout-cart/FlyoutCart";
+import MobileNav from '../shared/nabar/MobileNav';
+import Backdrop from '../backdrop/Backdrop';
 
 function RootLayout() {
   const [flyoutCartIsOpen, setFlyoutCartIsOpen] = useState(false);
+  const [resNavIsOpen, setResNavIsOpen] = useState(false);
+
   function toggleFlyoutCartOpen() {
     setFlyoutCartIsOpen((prevState) => !prevState);    
+  }
+
+  function handleOpenNav() {
+    setResNavIsOpen((oldState) => !oldState);
   }
 
   return (
     <>
       <DiscountRebon />
-      <Navbar toggleFlyoutCartOpen={toggleFlyoutCartOpen} />
+      {resNavIsOpen && <MobileNav handleOpenNav={handleOpenNav} />}
+      {(resNavIsOpen || flyoutCartIsOpen) && <Backdrop />}
+      <Navbar
+        toggleFlyoutCartOpen={toggleFlyoutCartOpen}
+        handleOpenNav={handleOpenNav}
+      />
       <AnimatePresence
         onExitComplete={() => {
           console.log("Animation completed");
@@ -24,7 +37,6 @@ function RootLayout() {
       >
         {flyoutCartIsOpen && (
           <FlyoutCart
-            open={flyoutCartIsOpen}
             toggleFlyoutCartOpen={toggleFlyoutCartOpen}
           />
         )}

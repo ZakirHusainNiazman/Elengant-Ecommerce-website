@@ -1,16 +1,20 @@
-import { useContext } from 'react';
 import { motion,AnimatePresence } from "framer-motion";
 
 
 import cssClasses from './FlyoutCart.module.css';
 
-import { CartContext } from '../../store/cart-context/shopping-cart-context';
 import RemoveBtn from '../remove-btn/RemoveBtn';
 import CartQtyBtn from '../cart-actions/CartQtyBtn';
+import { useDispatch } from "react-redux";
+import { cartActions } from "../../store/cartSlice";
 
-function CartItem({ id, name, price, quantity, color, image ,className}) {
-  const {addItemToCart, removeCartItem, updateItemQuantity } =
-    useContext(CartContext);
+function CartItem({ id, name, price, quantity, color, image, className }) {
+  const dispatch = useDispatch();
+
+  function handleRemoveItem(pid) {
+    dispatch(cartActions.removeItem({ id: pid }));
+  }
+  
   return (
     <>
       <AnimatePresence>
@@ -34,14 +38,13 @@ function CartItem({ id, name, price, quantity, color, image ,className}) {
               <p className={cssClasses["cart-item-color"]}>Color: {color}</p>
               <CartQtyBtn
                 quantity={quantity}
-                onIncremeant={() => updateItemQuantity(id)}
-                onDecremeant={() => addItemToCart(id)}
+                pid={id}
               />
             </div>
           </div>
           <div className={cssClasses["cart-item-action"]}>
             <p className={cssClasses["cart-item-price"]}>${price}</p>
-            <RemoveBtn onRemove={() => removeCartItem(id)} />
+            <RemoveBtn onRemove={() => handleRemoveItem(id)} />
           </div>
         </motion.li>
       </AnimatePresence>

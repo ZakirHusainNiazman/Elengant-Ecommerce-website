@@ -7,12 +7,16 @@ function Input({label,error,type="text",isValid,...props}) {
         {label}
       </label>
       <input
-        className={cssClasses["input"]}
-              type="text"
-              name={name}
-              id={name}
-        placeholder={placeholder}
+        className={`${cssClasses["input"]} ${
+          error && cssClasses["is-invalid"]
+        } ${
+          isValid && cssClasses["is-valid"]
+        }`}
+        type={type}
+        {...props}
+        id={props.name}
       />
+      {error && <p className={cssClasses["error"]}>{error}</p>}
     </div>
   );
 }

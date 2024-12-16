@@ -21,17 +21,6 @@
   max-width: 320px;
 }
 
-.article-image {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.article-title {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 24px;
-  margin-bottom: 10px;
-}
 
 @media screen and (max-width: 630px) {
   .articles-wrapper {

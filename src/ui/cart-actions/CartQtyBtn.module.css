@@ -14,6 +14,8 @@
     font-size: 25px;
     font-weight: 300;
     cursor: pointer;
+    flex-grow: 1;
+    height: 100%;
 }
 .increament-btn:hover{
     background: linear-gradient(to right,white,#6C7275 100%);

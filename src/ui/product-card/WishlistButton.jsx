@@ -11,7 +11,7 @@ import cssClasses from "./WishlistButton.module.css";
 
 function WishlistButton({ isAdded, ...props }) {
   return (
-    <Link {...props} className={cssClasses["wishlist-btn"]}>
+    <button {...props} type="button" className={cssClasses["wishlist-btn"]}>
       {isAdded ? (
         <motion.img
           className={cssClasses.icon}
@@ -29,7 +29,7 @@ function WishlistButton({ isAdded, ...props }) {
           transition={{ type: "spring", stiffness: 500 }}
         />
       )}
-    </Link>
+    </button>
   );
 }
 

@@ -1,0 +1,42 @@
+.order-table {
+  border-spacing: 20px 10px 30px 0;
+}
+
+.order-table th,
+.order-table td {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  border-bottom: 1px solid #e3eef7;
+  padding-bottom: 20px;
+  border-spacing: 20px;
+}
+
+.order-table th {
+  color: #6c7275;
+  margin-bottom: 1px;
+}
+.order-table tr {
+  padding-bottom: 20px;
+}
+.order-table tr:first-child {
+  padding-bottom: 10px;
+}
+
+.orderBlock{
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+
+}
+@media screen and (max-width: 620px) {
+  .order-table th,
+  .order-table td {
+    border-bottom: unset;
+  }
+  
+
+}
+

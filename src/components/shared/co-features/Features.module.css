@@ -1,0 +1,29 @@
+.co-features {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+/* responsiveness */
+@media screen and (max-width: 1024px) {
+  .co-features {
+    grid-column-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .co-features {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+  }
+}
+
+
+@media screen and (max-width: 630px) {
+  
+  .co-features {
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+  }
+}

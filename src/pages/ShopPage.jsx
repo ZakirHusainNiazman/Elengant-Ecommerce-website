@@ -1,9 +1,5 @@
 import { useState, useEffect } from "react";
-
-import { DUMMY_PRODUCTS,calculatePrice } from "../dummy-products.js";
-
-import ProductCard from "../ui/product-card/ProductCard.jsx";
-
+import { useParams } from "react-router-dom";
 
 import cssClasses from "../components/shop-page/Shop.module.css";
 
@@ -11,65 +7,93 @@ import HeroSection from "../ui/hero-section/HeroSection.jsx";
 
 import heroImage from "../assets/shop-images/hero-image.svg";
 
-import Dropdown from "../ui/dropdown/Dropdown.jsx";
 import ToolbarIcon from "../ui/toolbar-icon/ToolbarIcon.jsx";
+import Products from "../components/shop-page/Products.jsx";
+import Dropdown from "../ui/dropdown/Dropdown.jsx";
 
 function ShopPage() {
   const [layout, setlayout] = useState("");
+  const params = useParams();
+  const [category, setCategory] = useState(
+    params.category ? params.category : "all"
+  );
+  const [priceRange, setPriceRange] = useState({ start: 0, end: null });
 
   const handleResize = () => setWindowWidth(window.innerWidth);
+
+  // it will catch the size
   const windowWidth = window.innerWidth;
-    window.addEventListener('resize', () => {
-       switch (true) {
-         case windowWidth >= 1024 :
-           setlayout("");
-           break;
-         default:
-           setlayout("grid");
-           break;
-       }
-    })
+  window.addEventListener("resize", () => {
+    switch (true) {
+      case windowWidth >= 1024:
+        setlayout("");
+        break;
+      default:
+        setlayout("grid");
+        break;
+    }
+  });
+  // this function will handle layouts
   function handleLayout(type) {
-    setlayout(type)
+    setlayout(type);
   }
-  console.log(layout);
+
+  function onChangeCategorySelected(value) {
+    setCategory(value);
+  }
   
-  const productsToShow = layout === 'grid' ? 9 : 12;
-  
+  function onChangePriceSelected(value) {
+    console.log(value);
+    value = parseInt(value);
+    
+    if (value === -1) {
+      setPriceRange({ start: 0, end: Infinity }); // Allow all prices
+    } else {
+      if (value === 400) {
+        setPriceRange({ start: 400, end: Infinity }); // $400 and above
+      } else {
+        setPriceRange({ start: value, end: value + 100 }); // Specific range
+      }
+    }
+  }
+
+  // this code will hanlde producst rendering based on catgory
+ 
+
   return (
     <div className={`${cssClasses["shop-page"]}`}>
       <HeroSection
         title="Shop Page"
         subTitle="Let’s design the place you always imagined."
-        image={heroImage}
+        backgroundImage={heroImage}
         path={["Home", "Shop"]}
       />
-      <div>
-        <div className={`${cssClasses["products-header"]} container`}>
+      <div className={`${cssClasses["shop-page-body"]} container`}>
+        <div className={cssClasses["products-header"]}>
           <div className={cssClasses["filter-con"]}>
             <Dropdown
+              selectedOption={category}
+              onChangeValue={onChangeCategorySelected}
               options={[
-                "All Rooms",
-                "Living Room",
-                "Bedroom",
-                "Kitchen",
-                "Bathroom",
-                "Dinning",
-                "Outdoor",
+                { label: "All Rooms", value: "all" },
+                { label: "Living Room", value: "living" },
+                { label: "Bedroom", value: "bedroom" },
+                { label: "Kitchen", value: "kitchen" },
+                { label: "Bathroom", value: "bathroom" },
+                { label: "Dinning", value: "dinning" },
+                { label: "Outdoor", value: "outdoor" },
               ]}
-              label="CATEGORIES"
-              className={cssClasses["dropdown-half"]}
             />
             <Dropdown
+              onChangeValue={onChangePriceSelected}
               options={[
-                "All Price",
-                "$0.00 - 99.99",
-                "$200.00 - 299.99",
-                "$300.00 - 399.99",
-                "$400.00+",
+                { label: "All Price", value: -1 },
+                { label: "$0.00 - 99.99", value: 0.0 },
+                { label: "$100.00 - 199.99", value: 100.0 },
+                { label: "$200.00 - 299.99", value: 200.0 },
+                { label: "$300.00 - 399.99", value: 300.0 },
+                { label: "$400.00+", value: 400.0 },
               ]}
-              label="PRICE"
-              className={cssClasses["dropdown-half"]}
             />
           </div>
           <div className={cssClasses["toolbar"]}>
@@ -109,27 +133,7 @@ function ShopPage() {
             </div>
           </div>
         </div>
-        <div
-          className={`${cssClasses["products-con"]} container ${
-            cssClasses[`${layout}`]
-          }`}
-        >
-          {DUMMY_PRODUCTS.slice(0,productsToShow).map((product) => {
-            return (
-              <ProductCard
-                key={product.id}
-                image={product.images[0]}
-                productName={product.title}
-                price={product.price}
-                layout={layout}
-                status={product.status}
-                stars={product.stars}
-                discount={product.discount}
-                pid={product.id}
-              />
-            );
-          })}
-        </div>
+        <Products priceRange={priceRange} layout={layout} category={category} />
       </div>
     </div>
   );

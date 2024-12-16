@@ -9,9 +9,9 @@ function WishlistTextButton({isAdded}) {
     <a href="" className={`${cssClasses["whishlist-btn"]}`}>
       <span>
         {isAdded ? (
-          <BsHeartFill size="18"  />
+          <BsHeartFill size={18}  />
         ) : (
-          <BsHeart size="18" />
+          <BsHeart size={18} />
         )}
       </span>
       <span>Wishlist</span>

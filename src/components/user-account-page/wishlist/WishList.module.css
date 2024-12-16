@@ -1,0 +1,122 @@
+.item-wrapper,
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 25% 132px;
+  grid-template-rows: 1fr;
+  align-items: center;
+  text-align: left;
+  grid-template-areas: "item1 item2 item3";
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d3d5d6;
+}
+
+.table-header {
+  list-style: none;
+  border-bottom: 1px solid #e8ecef;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.header {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #6c7275;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  grid-area: item1;
+}
+
+.product-image {
+  height: 72px;
+  width: 60px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 10px;
+}
+
+.sub_title {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #6c7275;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  grid-area: item2;
+}
+
+.btn {
+  padding: 6px;
+  grid-area: item3;
+}
+
+@media screen and (max-width: 1200px) {
+  .item-wrapper,
+.table-header {
+  grid-template-columns: 1fr 15% 132px;
+}
+}
+
+@media screen and (max-width: 1024px) {
+  .item-wrapper,.table-header{
+    grid-template-columns: 1fr 80px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
+  }
+  .header:last-child{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .item-wrapper,
+.table-header {
+  grid-template-columns: 1fr 25% 132px;
+  grid-template-areas: "item1 item2 item3";
+}
+.header:last-child{
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item-wrapper,.table-header{
+    grid-template-columns: 1fr 40px;
+  }
+
+  .item-wrapper,.table-header{
+    grid-template-columns: 1fr 40px;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item3";
+  }
+  .header:last-child{
+    display: none;
+  }
+}

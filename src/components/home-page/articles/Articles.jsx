@@ -2,8 +2,8 @@ import articleImage1 from "../../../assets/home-images/article-image1.svg";
 import articleImage2 from "../../../assets/home-images/article-image2.svg";
 import articleImage3 from "../../../assets/home-images/article-image3.svg";
 import RightArrowBtn from "../../../ui/right-arrow-btn/RightArrowBtn";
+import ArticleCard from "../../shared/article/ArticleCard";
 
-import ArticleCard from "./ArticleCard";
 
 import cssClasses from "./Articles.module.css";
 
@@ -12,7 +12,7 @@ function Articles() {
     <section className={`${cssClasses['articles-section']} container`}>
       <div className={cssClasses['articles-header']}>
         <h2 className={cssClasses['articles-title"']}>Articles</h2>
-        <RightArrowBtn label="More Articles " cssClass="btn-black" />
+        <RightArrowBtn url='/blogs' label="More Articles " cssClass="btn-black" />
       </div>
       <div className={cssClasses["articles-wrapper"]}>
         <ArticleCard

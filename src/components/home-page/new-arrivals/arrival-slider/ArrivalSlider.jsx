@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useSelector } from "react-redux";
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,6 +14,7 @@ import './ArrivalSlider.css'
 import { DUMMY_PRODUCTS } from "../../../../dummy-products";
 
 function ArrivalSlider() {
+  const wishlistItems = useSelector((state) => state.wishlist.items);
   return (
     <div className="arrival-slider-con">
       <Swiper
@@ -21,20 +23,23 @@ function ArrivalSlider() {
         freeMode={true}
         modules={[FreeMode, Pagination]}
       >
-        {DUMMY_PRODUCTS.map((product) => (
-          <SwiperSlide key={product.id}>
-            <ProductCard
-              pid={product.id}
-              image={product.images[0]}
-              productName={product.title}
-              price={product.price}
-              status={product.status}
-              discount={product.discount}
-              isAdded={true}
-              className="slider-item-image"
-            />
-          </SwiperSlide>
-        ))}
+        {DUMMY_PRODUCTS.map((product) =>{ 
+          const isInWishlist = wishlistItems.some((item)=>item.id === product.id)
+          return (
+            <SwiperSlide key={product.id}>
+              <ProductCard
+                pid={product.id}
+                image={product.images[0]}
+                productName={product.title}
+                price={product.price}
+                status={product.status}
+                discount={product.discount}
+                isAdded={isInWishlist}
+                className="slider-item-image"
+              />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

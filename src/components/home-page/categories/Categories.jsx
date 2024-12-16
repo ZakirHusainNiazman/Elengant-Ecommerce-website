@@ -13,18 +13,21 @@ function Categories() {
         title="Living Room"
         btnLabel="Shop Now"
         class_name="category-header1"
+        btnUrl="shop/living"
       />
       <Category
         img={cuboardImage}
         title="Bedroom"
         btnLabel="Shop Now"
         class_name="category-header2"
+        btnUrl="shop/bedroom"
       />
       <Category
         img={toasterImage}
         title="Kitchen"
         btnLabel="Shop Now"
         class_name="category-header2"
+        btnUrl="shop/kitchen"
       />
     </section>
   );

@@ -29,4 +29,26 @@ outline: none;
 color: #6C7275;
 width: 100%;
 box-sizing: border-box;
+margin-bottom: 10px;
+}
+
+.input:focus{
+outline:1px solid rgb(120, 120, 255);
+border:1px solid rgb(205, 204, 204);
+}
+
+.is-invalid{
+    background-color: #F6D6D6;
+}
+
+.is-valid{
+    background-color: #EBEAFF;
+}
+
+.error{
+    font-size: 12px;
+font-weight: 700;
+line-height: 12px;
+text-align: left;
+color: red;
 }

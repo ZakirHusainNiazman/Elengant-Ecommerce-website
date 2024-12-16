@@ -1,50 +1,47 @@
-import {useState} from 'react'
-import Select from './Select'
+import { useState } from "react";
+import cssClasses from "./Dropdown.module.css";
+import Select from "./Select";
 
-import cssClasses from './Dropdown.module.css';
+function Dropdown({ selectedOption, options,onChangeValue,className }) {
+  const [showMenu, setShowMenu] = useState(false);
+  const [selected, setSelected] = useState(
+    selectedOption ? selectedOption : options[0].label
+  );
+  const [selectedItemValue, setSelectedItemValue] = useState(options[0].value);
 
-function Dropdown({options,label,className=''}) {
-  const [menuShow, setMenuShow] = useState(false);
-  const [selected, setSelected] = useState(options[0]);
+  function toggleShowMenu() {
+    setShowMenu((prevState) => !prevState);
+  }
 
-  const selectOption = e => {
+  function handleSelect(e) {
     setSelected(e.target.innerText);
-    setMenuShow((oldState) => !oldState);
+    setSelectedItemValue(e.target.dataset.value);
+    onChangeValue(e.target.dataset.value);
+    toggleShowMenu();
   }
 
-  const dropdownList = options.map((option, i) => {
-    
-    return (
-      <li
-        key={i}
-        className={option === selected ? cssClasses["selected"] :undefined}
-        onClick={selectOption}
-      >
-        {option}
-      </li>
-    );
-  }
-  )
 
   return (
-    <>
-      <div className={`${cssClasses["dropdown"]} ${className}`}>
-        {label && <h5 className={cssClasses["dropdown-label"]}>{label}</h5>}
-        <Select
-          menuShow={menuShow}
-          setMenuShow={setMenuShow}
-          selected={selected}
-        />
-        <ul
-          className={`${cssClasses["menu"]} ${
-            menuShow && cssClasses["menu-open"]
-          }`}
-        >
-          {dropdownList}
+    <div className={`${cssClasses.dropdown} ${className}`}>
+      <Select text={selected} onClick={toggleShowMenu} />
+      {showMenu && (
+        <ul className={cssClasses.dropdownMenu}>
+          {options.map((item) => (
+            <li
+              key={item.label}
+              data-value={item.value}
+              onClick={handleSelect}
+              className={`${cssClasses.menuItem} ${
+                selectedItemValue === item.value ? cssClasses.selected : ""
+              }`}
+            >
+              {item.label}
+            </li>
+          ))}
         </ul>
-      </div>
-    </>
+      )}
+    </div>
   );
 }
 
-export default Dropdown
+export default Dropdown;

@@ -6,7 +6,7 @@ import closeIcon from "../../assets/home-images/close.svg";
 function RemoveBtn({title,onRemove}) {
   return (
     <p className={cssClasses["item-delete-btn"]} onClick={onRemove}>
-          <img src={closeIcon} alt="" onClick={() => removeCartItem(id)} />
+          <img src={closeIcon} alt="" />
           {title && <span>{ title }</span>}
     </p>
   );

@@ -8,17 +8,23 @@ import MostAskedQuestion from "../components/product-page/body/MostAskedQuestion
 import AdditionalInfo from "../components/product-page/body/AdditionalInfo.jsx";
 import TabButton from "../components/product-page/body/TabButton.jsx";
 import { DUMMY_PRODUCTS } from "../dummy-products.js";
+import Path from "../ui/hero-section/Path.jsx";
+import { useParams } from "react-router-dom";
 
 function ProductPage() {
   const [selectedInfo, setSelectedInfo] = useState("additional-info");
+  const { pid } = useParams('p2');
+
+  const productId = pid || 'p4';
+  
+  
 
   function handleSelectedInfo(selectedInfo) {
     setSelectedInfo(selectedInfo);
   }
 
-  const pid = "p1";
 
-  const product = DUMMY_PRODUCTS.find((product) => (product.id = pid));
+  const product = DUMMY_PRODUCTS.find((product) => (product.id === productId));
   const questions = product.questions;
   const reviews = product.custumerReviews;
   const productDetails = {
@@ -34,10 +40,11 @@ function ProductPage() {
 
   return (
     <>
-      <Header />
       <section
         className={`${cssClasses["product-section-body"]} ${cssClasses["container"]}`}
       >
+        <Path array={["Home", "Shop", "Living Room", "Product"]} />
+        <Header {...product} />
         <ul className={cssClasses["product-info-navigation"]}>
           <TabButton
             onSelect={() => handleSelectedInfo("additional-info")}
@@ -58,7 +65,9 @@ function ProductPage() {
             Reviews
           </TabButton>
         </ul>
-        {selectedInfo === "additional-info" && <AdditionalInfo details={productDetails} />}
+        {selectedInfo === "additional-info" && (
+          <AdditionalInfo details={productDetails} />
+        )}
         {selectedInfo === "questions" && (
           <MostAskedQuestion questions={questions} />
         )}

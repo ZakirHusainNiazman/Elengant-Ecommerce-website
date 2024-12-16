@@ -10,11 +10,12 @@
     border-radius: 4px;
 }
 
-.checkbox label{
+.label{
 font-size: 16px;
 font-weight: 400;
 line-height: 26px;
 text-align: left;
 text-underline-position: from-font;
 text-decoration-skip-ink: none;
+color: #6C7275;
 }

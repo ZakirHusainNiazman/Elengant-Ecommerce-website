@@ -9,7 +9,6 @@ function ToolbarIcon({iconsNo,isVerticle,isHorizontle,isGrid,isActive}) {
             ${isActive && cssClasses["active"]}
             ${isVerticle && cssClasses["verticle"]} 
             ${isHorizontle && cssClasses["horizontle"]} 
-            ${isGrid && cssClasses["grid"]} 
         `}
       >
         <div className={`${cssClasses["icon-1"]} ${cssClasses["icon"]}`}></div>

@@ -1,0 +1,57 @@
+/* features style */
+
+
+
+.feature-card {
+  background-color: #f3f5f7;
+  padding: 30px;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.feature-icon {
+  width: 48px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    padding: 20px 10px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .card {
+    padding: 20px;
+  }
+  .title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+  }
+  ._sub-title_xkdiy_55 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}

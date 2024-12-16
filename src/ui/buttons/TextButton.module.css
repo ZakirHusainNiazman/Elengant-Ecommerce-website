@@ -1,0 +1,21 @@
+.btn{
+font-size: 14px;
+font-weight: 600;
+line-height: 20px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+text-decoration: none;
+color: #807E7E;
+background-color: unset;
+border: none;
+}
+
+.btn.active,.btn:hover{
+    color: black;
+    /* border-bottom: 2px solid #121212; */
+}
+
+.primary{
+    color: #38CB89;
+}

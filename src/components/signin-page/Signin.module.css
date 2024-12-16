@@ -1,0 +1,27 @@
+.title{
+font-size: 40px;
+font-weight: 500;
+line-height: 44px;
+letter-spacing: -0.4000000059604645px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+margin-bottom: 20px;
+}
+
+.sub_title{
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #6C7275;
+margin-bottom: 30px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

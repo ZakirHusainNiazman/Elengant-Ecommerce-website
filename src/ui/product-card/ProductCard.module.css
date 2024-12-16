@@ -4,6 +4,7 @@
 }
 .product-image{
     width: 100%;
+    cursor: pointer;
 }
 .card-header {
   position: relative;
@@ -21,6 +22,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 26px;
+  cursor: pointer;
 }
 
 .product-prices-con {
@@ -144,5 +146,10 @@ margin-bottom: 7px;
   flex-direction: column;
   gap: 0px;
 }
-
+.add-to-cart-btn{
+font-size: 14px;
+line-height: 20px;
+padding: 4px 24px;
+bottom: 10px;
+}
 }

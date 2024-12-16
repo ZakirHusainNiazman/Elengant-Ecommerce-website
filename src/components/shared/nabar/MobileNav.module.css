@@ -1,0 +1,118 @@
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 420px;
+    z-index: 100;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white ;
+    /* display: none; */
+}
+.logo-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-form{
+    border: 2px solid #6C7275;
+    padding: 0 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-input{
+    border: none;
+    outline: none;
+    background-color: unset;
+    height: 100%;
+    width: 100%;
+    padding: 13px 0;
+font-size: 16px;
+font-weight: 400;
+line-height: 22px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+.tab-buttons-wrapper{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* .tab-buttons-wrapper li{
+    width: 100%;
+} */
+
+.tab-button{
+    padding: 10px 0;
+    display: block;
+    border-bottom: 1px solid #e4ebf0;
+}
+
+.res-navigation-links li{
+    list-style: none;
+}
+
+.res-navigation-links li a{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #6C7275;
+font-size: 18px;
+font-weight: 500;
+line-height: 32px;
+letter-spacing: -0.4000000059604645px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+border-bottom: 1px solid #E8ECEF;
+padding-bottom: 5px;
+margin-bottom: 10px;
+}
+
+.icons-con{
+    display: flex;
+    gap: 10px;
+}
+
+.cart-items-no{
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    display: flex;
+    background-color: black;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Inter;
+font-size: 12px;
+font-weight: 700;
+line-height: 10px;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+.nav-socials-con{
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+@media screen and (max-width: 540px) {
+  .mobile-nav{
+    width: 90%;
+  }
+}

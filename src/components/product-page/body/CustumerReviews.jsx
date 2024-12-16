@@ -21,6 +21,10 @@ function CustumerReviews({reviews}) {
     });
     return () => {};
   }, []);
+
+  function handleReviewRender(value) {
+    
+  }
   return (
     <>
       <div className={cssClasses["custumer-reviews-con"]}>
@@ -47,7 +51,15 @@ function CustumerReviews({reviews}) {
       </div>
       <div className={cssClasses["custumer-reviews-header"]}>
         <span className={cssClasses["review-count-big"]}>11 Reviews</span>
-        <Dropdown options={["Newest", "Most Rated", "Oldest"]} />
+        <Dropdown
+          className={cssClasses.dropdown}
+          onChangeValue={handleReviewRender}
+          options={[
+            { label: "Newest", value: "newest" },
+            { label: "Most Rated", value: "most-rated" },
+            { label: "Oldest" ,value:'oldest'},
+          ]}
+        />
       </div>
       <div className={cssClasses["custumer-reviews-con"]}>
         {reviews.map((review) => (

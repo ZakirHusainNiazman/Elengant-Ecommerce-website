@@ -2,10 +2,10 @@ import cssClasses from './Path.module.css'
 
 import greaterThanIcon from "../../assets/product-images/greater-than-icon.svg";
 
-function Path({ array }) {
+function Path({ array,className }) {
   return (
     <ul
-      className={`${cssClasses["page-path-con"]} ${cssClasses["container"]} `}
+      className={`${cssClasses["page-path-con"]} ${className}`}
     >
       {array.map((item, index) => (
         <li key={index}>

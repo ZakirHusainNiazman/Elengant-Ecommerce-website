@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: repeat(3,7px);
     grid-template-rows: repeat(3,7px);
-
     grid-template-areas: 
     "icon-1 icon-2 icon-3"
     "icon-4 icon-5 icon-6"
@@ -10,7 +9,7 @@
     justify-content: center;
     gap: 2px;
     grid-column-gap: 2px;
-    width: 21px;
+    width: 20px;
 }
 .grid{
     grid-template-columns: repeat(2,1fr);
@@ -38,7 +37,8 @@
     background-color: #6C7275;
     border-radius: 2px;
 }
-.active .icon{
+.active .icon,
+.toolbar-icons-con1:hover .icon{
     background-color:black;
     border-radius: 2px;
 }

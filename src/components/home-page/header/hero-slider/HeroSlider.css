@@ -30,22 +30,23 @@
 
 .hero-slider .swiper-button-prev,
 .hero-slider .swiper-button-next {
-  padding: 5px 15px;
+  padding: 15px 25px;
   background-color: white;
   border-radius: 50%;
 }
 
 .hero-slider .swiper-button-next:after,
 .hero-slider .swiper-rtl .swiper-button-prev:after {
-  content: url(../../../../../assets/home-images/arrow-right.svg);
+  content: url('../../../../assets/ui-images/arrow-right.svg');
   opacity: 1;
 }
 
-.hero-slider .swiper-button-prev,
-.hero-slider .swiper-rtl .swiper-button-next {
-  content: url(../public/images/arrow-left.svg);
+.hero-slider .swiper-button-prev:after,
+.hero-slider .swiper-rtl .swiper-button-next:after {
+  content: url('../../../../assets/ui-images/arrow-left.svg');
   opacity: 1;
 }
+
 
 @media screen and (max-width:800px) {
   .swiper-button-next,.swiper-button-prev{

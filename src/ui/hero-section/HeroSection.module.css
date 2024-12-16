@@ -2,7 +2,7 @@
     position: relative;
     height: 392px;
     background-color: red;
-    background: url(../../assets/shop-images/hero-image.svg)  no-repeat;
+    background: no-repeat;
     background-position: center;
     background-size: cover;
 }
